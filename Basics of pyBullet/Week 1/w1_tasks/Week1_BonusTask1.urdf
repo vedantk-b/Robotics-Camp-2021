@@ -1,0 +1,182 @@
+<robot name="boxr2">
+<material name="blue">
+    <color rgba="0 0 0.8 1"/>
+</material>
+<material name="black">
+    <color rgba="0 0 0 1"/>
+</material>
+<material name="white">
+    <color rgba="1 1 1 1"/>
+</material>
+<material name="red">
+    <color rgba="1 0 0 1"/>
+</material>
+
+<link name="topbox">
+    <visual>
+        <geometry>
+            <box size="2 1 0.3"/>       
+        </geometry>
+        <origin xyz="0.0 0.0 1"/>
+        <material name = "red"/>
+    </visual>
+</link>
+
+<link name="thigh1">
+    <visual>
+        <geometry>
+            <cylinder radius="0.15" length="0.9"/>           
+        </geometry>
+        <material name = "white"/>
+        <origin xyz="0 0 -0.45"/>
+    </visual>
+</link>
+
+<link name="ulna1">
+    <visual>
+        <geometry>
+            <cylinder radius="0.15" length="0.9"/>           
+        </geometry>
+        <material name = "blue"/>
+        <origin xyz="0 0 -0.45" rpy = "0 0 0"/>
+    </visual>
+</link>
+
+<joint name="tb1" type="revolute">
+  <limit lower="0.0" upper="0.548" effort="1000.0" velocity="0.5"/>
+  <axis xyz="0 1 0"/>
+  <child link="thigh1"/>
+  <parent link="topbox"/>
+  <origin xyz="0.3 0.25 0.9" rpy="0.0 -1.04 0.0"/>
+</joint>
+
+<joint name="ut1" type="revolute">
+  <limit lower="0.0" upper="0.548" effort="1000.0" velocity="0.5"/>
+  <axis xyz="0 1 0"/>
+  <child link="ulna1"/>
+  <parent link="thigh1"/>
+  <origin xyz="0 0 -0.9" rpy="0.0 2.09 0.0"/>
+</joint>
+
+
+
+
+
+<link name="thigh2">
+    <visual>
+        <geometry>
+            <cylinder radius="0.15" length="0.9"/>           
+        </geometry>
+        <material name = "white"/>
+        <origin xyz="0 0 -0.45"/>
+    </visual>
+</link>
+
+<link name="ulna2">
+    <visual>
+        <geometry>
+            <cylinder radius="0.15" length="0.9"/>           
+        </geometry>
+        <material name = "blue"/>
+        <origin xyz="0 0 -0.45" rpy = "0 0 0"/>
+    </visual>
+</link>
+
+<joint name="tb2" type="revolute">
+  <limit lower="0.0" upper="0.548" effort="1000.0" velocity="0.5"/>
+  <axis xyz="0 1 0"/>
+  <child link="thigh2"/>
+  <parent link="topbox"/>
+  <origin xyz="-0.7 0.25 0.9" rpy="0.0 -1.04 0.0"/>
+</joint>
+
+<joint name="ut2" type="revolute">
+  <limit lower="0.0" upper="0.548" effort="1000.0" velocity="0.5"/>
+  <axis xyz="0 1 0"/>
+  <child link="ulna2"/>
+  <parent link="thigh2"/>
+  <origin xyz="0 0 -0.9" rpy="0.0 2.09 0.0"/>
+</joint>
+
+
+
+
+
+
+<link name="thigh3">
+    <visual>
+        <geometry>
+            <cylinder radius="0.15" length="0.9"/>           
+        </geometry>
+        <material name = "white"/>
+        <origin xyz="0 0 -0.45"/>
+    </visual>
+</link>
+
+<link name="ulna3">
+    <visual>
+        <geometry>
+            <cylinder radius="0.15" length="0.9"/>           
+        </geometry>
+        <material name = "blue"/>
+        <origin xyz="0 0 -0.45" rpy = "0 0 0"/>
+    </visual>
+</link>
+
+<joint name="tb3" type="revolute">
+  <limit lower="0.0" upper="0.548" effort="1000.0" velocity="0.5"/>
+  <axis xyz="0 1 0"/>
+  <child link="thigh3"/>
+  <parent link="topbox"/>
+  <origin xyz="0.3 -0.25 0.9" rpy="0.0 -1.04 0.0"/>
+</joint>
+
+<joint name="ut3" type="revolute">
+  <limit lower="0.0" upper="0.548" effort="1000.0" velocity="0.5"/>
+  <axis xyz="0 1 0"/>
+  <child link="ulna3"/>
+  <parent link="thigh3"/>
+  <origin xyz="0 0 -0.9" rpy="0.0 2.09 0.0"/>
+</joint>
+
+
+
+
+
+<link name="thigh4">
+    <visual>
+        <geometry>
+            <cylinder radius="0.15" length="0.9"/>           
+        </geometry>
+        <material name = "white"/>
+        <origin xyz="0 0 -0.45"/>
+    </visual>
+</link>
+
+<link name="ulna4">
+    <visual>
+        <geometry>
+            <cylinder radius="0.15" length="0.9"/>           
+        </geometry>
+        <material name = "blue"/>
+        <origin xyz="0 0 -0.45" rpy = "0 0 0"/>
+    </visual>
+</link>
+
+<joint name="tb4" type="revolute">
+  <limit lower="0.0" upper="0.548" effort="1000.0" velocity="0.5"/>
+  <axis xyz="0 1 0"/>
+  <child link="thigh4"/>
+  <parent link="topbox"/>
+  <origin xyz="-0.7 -0.25 0.9" rpy="0.0 -1.04 0.0"/>
+</joint>
+
+<joint name="ut4" type="revolute">
+  <limit lower="0.0" upper="0.548" effort="1000.0" velocity="0.5"/>
+  <axis xyz="0 1 0"/>
+  <child link="ulna4"/>
+  <parent link="thigh4"/>
+  <origin xyz="0 0 -0.9" rpy="0.0 2.09 0.0"/>
+</joint>
+
+</robot>
